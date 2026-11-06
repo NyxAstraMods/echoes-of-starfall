@@ -8,7 +8,7 @@
       paste it inside the [ ] brackets, and change the words.
    4. Pictures: put the file in the "images" folder, then write "images/name.jpg".
       Videos:   put the file in the "videos" folder, then write "videos/name.mp4".
-      If a picture is missing, the site shows a soft "Picture spot" box instead.
+      If a picture or video file is missing, the site just hides that spot.
    5. game is always "starsand" or "teredea".
    ===================================================================== */
 
