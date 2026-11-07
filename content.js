@@ -39,8 +39,8 @@ window.SITE = {
   // Sample:
   // { game: "starsand", title: "Project name", state: "WIP", note: "A short note." },
   projects: [
-    { game: "starsand", title: "Cinematic Studio", state: "Early prototype",
-      note: "Adding a cinematic studio to Starsand. Early-stage prototypes." },
+    { game: "starsand", title: "Cinematic Studio", state: "WIP",
+      note: "Adding a cinematic studio to Starsand. Early-stage prototypes. It can't be downloaded or used yet, it's just something I'm working on." },
     { game: "starsand", title: "Custom Characters", state: "WIP",
       note: "Create custom characters with outfit presets for seasonal pajamas and swimsuits." },
     { game: "starsand", title: "Rhythm Game Editor", state: "WIP",
