@@ -119,6 +119,11 @@ window.SITE = {
   // { month: "2026-11", game: "starsand", size: "small", idea: "The idea", note: "", by: "", state: "Taken" },
   requestsOpen: false,   // true = taking requests, false = closed (empty slots say "Closed")
   closedInfo: "Requests are closed right now. I have more than I agreed to do this month. When they reopen, I'll let you know!",
+  // Extra notes shown under the open/closed message. Each "..." is its own paragraph.
+  requestNotes: [
+    "Not all requests I'm working on are listed here, for both Starsand and Teredea. Some of them I may be debating taking.",
+    "I've done 10+ requests in a single month, and November's is taken up already. I'll do up to 2 requests for Teredea and 2 for Starsand a month, depending on how large they are. QOL takes priority over cheats. Be realistic, as I'm just one person and have had no time to work on my own mods.",
+  ],
   requestInfo: "Each month I take 4 requests per game: 2 small and 2 big. Slots open on the 1st. Send yours on Discord or in the mod page comments. First come, first served!",
   requests: [
     // Starsand - working on now

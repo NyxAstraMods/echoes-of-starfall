@@ -170,6 +170,9 @@ dialog#lb button{position:fixed; top:calc(1rem + env(safe-area-inset-top,0px)); 
 /* requests */
 .req-top{display:flex; flex-wrap:wrap; gap:1rem; align-items:center; justify-content:space-between; background:var(--bg2); border-radius:var(--r); padding:1rem 1.2rem; margin-bottom:1.2rem}
 .req-top p{margin:0; max-width:70ch}
+.req-text{display:grid; gap:.6rem; min-width:0}
+.req-text #reqInfo{font-weight:700}
+#reqNotes{display:grid; gap:.6rem; color:var(--muted)}
 .req-top label{display:flex; align-items:center; gap:.5rem; font-weight:700}
 select{font:inherit; color:var(--fg); background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:.4rem .7rem}
 .req-games{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:1.2rem}
@@ -269,7 +272,7 @@ footer .links span{color:var(--muted); border-style:dashed}
   <section id="requests" class="wrap">
     <div class="sec-head"><div><span class="eyebrow">Monthly slots</span><h2>Requests</h2></div></div>
     <div class="req-top">
-      <p id="reqInfo"></p>
+      <div class="req-text"><p id="reqInfo"></p><div id="reqNotes"></div></div>
       <label for="month">Month <select id="month"></select></label>
     </div>
     <div class="req-games" id="reqGames"></div>
@@ -468,6 +471,7 @@ footer .links span{color:var(--muted); border-style:dashed}
   function renderRequests(){
     const closed = S.requestsOpen === false;
     $("reqInfo").textContent = closed ? (S.closedInfo || "Requests are closed right now.") : (S.requestInfo || "");
+    $("reqNotes").innerHTML = (S.requestNotes || []).map(n => `<p>${esc(n)}</p>`).join("");
     const m = $("month").value;
     const keys = Object.keys(G).filter(show);
     $("reqGames").className = "req-games" + (keys.length === 1 ? " single" : "");
