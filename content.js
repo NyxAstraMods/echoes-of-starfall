@@ -97,8 +97,6 @@ window.SITE = {
   mods: [
     { game: "starsand", name: "Any Clothes As Pajamas Or Swimsuit", state: "Released", version: "0.1.1", downloads: [ { label: "Download", file: "downloads/Any-Outfit-Swimwear-Pajamas-0.1.1.zip" } ], link: "" },
     { game: "starsand", name: "More Saves 12-50", state: "Released", version: "1.0.1", downloads: [ { label: "Download", file: "downloads/More-Saves-1.0.1.zip" } ], link: "" },
-    { game: "starsand", name: "Stellas Beach Performance - Song Choice Selection", state: "Released", link: "" },
-    { game: "starsand", name: "Stellas Original Early Access Song Fix", state: "Released", link: "" },
 
     { game: "teredea", name: "Storage Plus", state: "Released", version: "1.0.2", downloads: [ { label: "Download", file: "downloads/Storage-Plus-1.0.2.zip" }, { label: "For Keyboard & Mouse mod", file: "downloads/Storage-Plus-1.0.2-KBM.zip" } ], picture: "images/mods/teredea-storage-plus.jpg", link: "" },
     { game: "teredea", name: "Fridge Plus", state: "Released", version: "1.0.5", downloads: [ { label: "Download", file: "downloads/Fridge-Plus-1.0.5.zip" }, { label: "For Keyboard & Mouse mod", file: "downloads/Fridge-Plus-1.0.5-KBM.zip" } ], picture: "images/mods/teredea-fridge-plus.jpg", link: "" },
@@ -158,8 +156,8 @@ window.SITE = {
       note: "Moving and fixing a competition layout blueprint's position. Starsand itself couldn't do it right lol, someone's contest broke!" },
 
     // Starsand - done
-    { month: "", game: "starsand", size: "", state: "Done", idea: "Stellas Beach Performance - Song Choice Selection" },
-    { month: "", game: "starsand", size: "", state: "Done", idea: "Stellas Original Early Access Song Fix" },
+    { month: "", game: "starsand", size: "", state: "Done", idea: "Stellas Beach Performance - Song Choice Selection (Location: Nexus)" },
+    { month: "", game: "starsand", size: "", state: "Done", idea: "Stellas Original Early Access Song Fix (Location: Nexus)" },
 
     // Teredea - done in October and November
     { month: "", when: "Oct - Nov 2026", game: "teredea", size: "", state: "Done", idea: "Storage Plus" },
