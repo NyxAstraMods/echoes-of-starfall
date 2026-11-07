@@ -38,6 +38,7 @@ window.SITE = {
   // state: "WIP", "Early prototype", "Barely started", "Later" or "Plans"
   // Sample:
   // { game: "starsand", title: "Project name", state: "WIP", note: "A short note." },
+  projectsNote: "Lots of plans! Not all of them are listed here, because I'm not sure yet what's possible with some of them. Sometimes I'll keep my plans secret until I've made more progress on them!",
   projects: [
     { game: "starsand", title: "Cinematic Studio", state: "WIP",
       note: "Adding a cinematic studio to Starsand. Early-stage prototypes. It can't be downloaded or used yet, it's just something I'm working on." },

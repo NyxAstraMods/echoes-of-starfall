@@ -256,7 +256,7 @@ footer .links span{color:var(--muted); border-style:dashed}
 
 <main>
   <section id="now" class="wrap">
-    <div class="sec-head"><div><span class="eyebrow">Main focus</span><h2>My projects</h2><p class="muted">My own mods and the big things I'm building. Requests are a side thing.</p></div></div>
+    <div class="sec-head"><div><span class="eyebrow">Main focus</span><h2>My projects</h2><p class="muted">My own mods and the big things I'm building. Requests are a side thing.</p><p class="muted" id="projNote"></p></div></div>
     <div class="board" id="board"></div>
     <div id="reqNow"></div>
   </section>
@@ -436,6 +436,7 @@ footer .links span{color:var(--muted); border-style:dashed}
     ${note ? `<span class="note">${esc(note)}</span>` : ""}</div>`;
 
   function renderBoard(){
+    $("projNote").textContent = S.projectsNote || "";
     const keys = Object.keys(G).filter(show);
     $("board").className = "board" + (keys.length === 1 ? " single" : "");
     $("board").innerHTML = keys.map(k => {
