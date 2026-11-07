@@ -1,4 +1,4 @@
-/* =====================================================================
+﻿/* =====================================================================
    EDIT THIS FILE TO CHANGE YOUR WEBSITE.  (You never need to touch index.html.)
 
    Simple rules:
@@ -65,10 +65,10 @@ window.SITE = {
     title: "Why I started modding in the first place",
     paragraphs: [
       "I love these games a lot, but I wanted a lot more from them, and I see great potential. I love writing, making my own characters, and improving the characters and quests that already exist.",
-      "My priority for mods is making my studio for Starsand (which I'm not doing for Teredea, that is a LOT of work xD) ❤️ I hope other people can use it eventually. Starsand has a hefty character creator, so I think it's worth it. I want to overhaul the story, make more cinematics, dialogue and quests, make custom characters and improve the ones that exist.",
+      "My priority for mods is making my studio for Starsand (which I'm not doing for Teredea, that is a LOT of work xD) â¤ï¸ I hope other people can use it eventually. Starsand has a hefty character creator, so I think it's worth it. I want to overhaul the story, make more cinematics, dialogue and quests, make custom characters and improve the ones that exist.",
       "I plan to make Youfang fully romanceable. In Teredea, I'm making my custom NPCs, Keir and Nox. Keir will be a romanceable who is a core part of the story and fills in a LOT of plot holes. I want to have my own heart events for the characters, make real cutscenes for them and special moments.",
       "I want to make the story more impactful in both games, or write story where some is missing. This alone will likely take a very long time, which is why I had to limit requests: I've had little to no time to actually work on why I'm doing this in the first place. Larger requests I decide to accept might take longer. I may also limit requests, because the stuff I want to work on is my drive and motivation to do this in the first place, and if I haven't worked on it in a while, I lose pace with it.",
-      "I appreciate everyone's warm support ^^ and I appreciate you following what I'm doing. If you'd like to donate to help me make more mods, get fixes and support my progress, I have a Ko-fi link. Any donation, no matter how big or how small, means the world to me. I'm forever grateful for your support! ❤️",
+      "I appreciate everyone's warm support ^^ and I appreciate you following what I'm doing. If you'd like to donate to help me make more mods, get fixes and support my progress, I have a Ko-fi link. Any donation, no matter how big or how small, means the world to me. I'm forever grateful for your support! â¤ï¸",
     ],
     donateLabel: "Donate on Ko-fi",
     donateLink: "",   // your Ko-fi link, like "https://ko-fi.com/yourname"
@@ -96,7 +96,7 @@ window.SITE = {
     { game: "starsand", access: "free", name: "Stellas Original Early Access Song Fix", state: "Released", link: "" },
 
     { game: "teredea", access: "free", name: "Storage Plus", state: "Released", picture: "images/mods/teredea-storage-plus.jpg", link: "" },
-    { game: "teredea", access: "free", name: "Fridge Plus", state: "Released", link: "" },
+    { game: "teredea", access: "free", name: "Fridge Plus", state: "Released", picture: "images/mods/teredea-fridge-plus.jpg", link: "" },
     { game: "teredea", access: "free", name: "Hue Color Editor", state: "Released", link: "" },
     { game: "teredea", access: "free", name: "Fields Max Happy Infinitely", state: "Released", picture: "images/mods/teredea-fields-happy.jpg", link: "" },
     { game: "teredea", access: "free", name: "Best Quality Items", state: "Released", picture: "images/mods/teredea-best-quality.jpg", link: "" },
