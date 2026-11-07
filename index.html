@@ -140,8 +140,14 @@ section{padding-block:3.2rem 1rem}
 h3.sub{font-size:1.4rem; margin:2rem 0 .6rem}
 .slot .note{font-size:.85rem; color:var(--muted)}
 
-/* dev log */
+/* updates */
 .posts{display:grid; gap:1.4rem}
+.older summary{cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:.5rem; font:500 .9rem var(--mono); color:var(--muted); padding:.55rem 1rem; border:1px solid var(--line); border-radius:999px}
+.older summary::-webkit-details-marker{display:none}
+.older summary::before{content:"▸"; transition:transform .2s}
+.older[open] summary::before{transform:rotate(90deg)}
+.older summary:hover{color:var(--fg); border-color:var(--muted)}
+.older .posts{margin-top:1.4rem}
 .post{display:grid; grid-template-columns:140px minmax(0,1fr); gap:1.4rem; padding-bottom:1.4rem; border-bottom:1px solid var(--line)}
 @media (max-width:640px){ .post{grid-template-columns:1fr; gap:.4rem} }
 .post-date{font:500 .85rem/1.4 var(--mono); color:var(--muted); display:grid; gap:.4rem; align-content:start}
@@ -262,7 +268,7 @@ footer .links span{color:var(--muted); border-style:dashed}
       <a href="#why">Why I mod</a>
       <a href="#mods">Free mods</a>
       <a href="#shop">Early access</a>
-      <a href="#log">Dev log</a>
+      <a href="#log">Updates</a>
       <a href="#gallery">Gallery</a>
       <a href="#requests">Requests</a>
       <a href="#commissions">Commissions</a>
@@ -304,7 +310,7 @@ footer .links span{color:var(--muted); border-style:dashed}
 
 
   <section id="log" class="wrap">
-    <div class="sec-head"><div><span class="eyebrow">Updates</span><h2>Dev log</h2><p class="muted">Notes, videos and pictures from the modding desk.</p></div></div>
+    <div class="sec-head"><div><span class="eyebrow">Latest news</span><h2>Updates</h2><p class="muted">Notes, videos and pictures from the modding desk.</p></div></div>
     <div class="posts" id="posts"></div>
   </section>
 
@@ -495,10 +501,10 @@ footer .links span{color:var(--muted); border-style:dashed}
         r.note, r.game)).join("")}</div></div>` : "";
   }
 
-  // ---------- dev log ----------
+  // ---------- updates: newest one shown, older ones folded away ----------
   function renderPosts(){
     const list = (S.posts || []).filter(p => show(p.game)).sort((a, b) => String(b.date).localeCompare(String(a.date)));
-    $("posts").innerHTML = list.length ? list.map(p => {
+    const post = p => {
       const [y, m, d] = String(p.date).split("-");
       const pics = (p.pictures || []).map(x => `<figure>${pic(x.src, x.caption)}${x.caption ? `<figcaption class="cap">${esc(x.caption)}</figcaption>` : ""}</figure>`).join("");
       const vid = p.video ? `<video class="vid" controls preload="metadata" src="${esc(p.video)}" data-src="${esc(p.video)}"></video>` : "";
@@ -508,7 +514,12 @@ footer .links span{color:var(--muted); border-style:dashed}
         <div style="min-width:0"><h3>${esc(p.title)}</h3><div class="text">${nl(p.text)}</div>
           ${pics ? `<div class="post-media">${pics}</div>` : ""}${vid}${yt}</div>
       </article>`;
-    }).join("") : `<p class="empty-note">No posts yet.</p>`;
+    };
+    const older = list.slice(1);
+    $("posts").innerHTML = list.length ? post(list[0]) + (older.length ? `
+      <details class="older"><summary>Older updates (${older.length})</summary>
+        <div class="posts">${older.map(post).join("")}</div>
+      </details>` : "") : `<p class="empty-note">No updates yet.</p>`;
     $("posts").querySelectorAll("video.vid").forEach(v => v.addEventListener("error", () => v.remove()));
   }
 

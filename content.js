@@ -106,7 +106,8 @@ window.SITE = {
     { game: "teredea", access: "free", name: "Unlock All Outfits", state: "Released", picture: "images/mods/teredea-unlock-outfits.jpg", link: "" },
   ],
 
-  // ---------- Dev log posts (the site sorts them by date) ----------
+  // ---------- Updates (the site sorts them by date) ----------
+  // The newest one shows on the page. Older ones go under an "Older updates" button.
   // date is "YEAR-MONTH-DAY". Use \n\n inside text for a new paragraph.
   // pictures, video and youtube are all optional - leave them out if you don't need them.
   // Sample:
