@@ -139,6 +139,7 @@ window.SITE = {
   requestNotes: [
     "Not all requests I'm working on are listed here, for both Starsand and Teredea. Some of them I may be debating taking.",
     "I've done 10+ requests in a single month, and November's is taken up already. I'll do up to 2 requests for Teredea and 2 for Starsand a month, depending on how large they are. QOL takes priority over cheats. Be realistic, as I'm just one person and have had no time to work on my own mods.",
+    "I'm disabled with multiple chronic illnesses, and some months I may take off for my emotional or mental well-being. I can have flare-ups, and I tend to get new conditions and symptoms as time goes by, so please understand. I do requests because I love the community, but this can't become a full-time job, and I can't exactly sell mods either. Thank you!",
     "Note on animations: I don't make custom animations. Even purchased animations have to be adjusted by hand for each character and model, across many frames (I've tried). So anything with new animations will take a lot longer and may cost more than an average mod, unless it uses the game's existing animations with subtle changes.",
   ],
   requestInfo: "Each month I take up to 2 requests per game, depending on how large they are. Slots open on the 1st. Send yours on Discord or in the mod page comments. First come, first served!",
