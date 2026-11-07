@@ -72,39 +72,42 @@ window.SITE = {
       "I appreciate everyone's warm support ^^ and I appreciate you following what I'm doing. If you'd like to donate to help me make more mods, get fixes and support my progress, I have a Ko-fi link. Any donation, no matter how big or how small, means the world to me. I'm forever grateful for your support! ❤️",
     ],
     donateLabel: "Donate on Ko-fi",
-    donateLink: "",   // your Ko-fi link, like "https://ko-fi.com/yourname"
+    donateLink: "https://ko-fi.com/nyxastra",
   },
 
-  // ---------- Shop (early access and paid mods) ----------
-  shopName: "Buy Me a Coffee",
-  shopLink: "https://buymeacoffee.com/nyxastramok",
-  shopInfo: "Early access and paid mods are on my Buy Me a Coffee. Supporting me there helps me keep making free mods too!",
+  // ---------- Support me ----------
+  // A button with url: "" is hidden.
+  support: {
+    title: "Support me!",
+    info: "I'm a single creator, so every donation helps!",
+    links: [
+      { label: "Ko-fi",           url: "https://ko-fi.com/nyxastra" },
+      { label: "Buy Me a Coffee", url: "https://buymeacoffee.com/nyxastramok" },
+    ],
+  },
 
-  // ---------- Your mods ----------
-  // access: "free" = shows in Free mods with a Download button
-  //         "paid" = shows in Early access & paid with a shop button (no download on the site)
-  // state: "Released", "Early access", "Work in progress" or "Planned"
-  // link: free mods = the download page (like the Nexus page). Paid mods = that mod's shop page
-  //       (leave it "" to use your main shop link above).
+  // ---------- Your free mods ----------
+  // state: "Released", "Work in progress" or "Planned"
+  // link: the download page (like the Nexus page).
   // picture and about are optional.
   // Sample:
-  // { game: "starsand", access: "free", name: "Mod name", state: "Released", version: "1.0",
+  // { game: "starsand", name: "Mod name", state: "Released", version: "1.0",
   //   picture: "images/mod-picture.jpg", about: "One line about the mod.", link: "https://..." },
   mods: [
-    { game: "starsand", access: "free", name: "Any Clothes As Pajamas Or Swimsuit", state: "Released", link: "" },
-    { game: "starsand", access: "free", name: "More Saves 12-50", state: "Released", link: "" },
-    { game: "starsand", access: "free", name: "Stellas Beach Performance - Song Choice Selection", state: "Released", link: "" },
-    { game: "starsand", access: "free", name: "Stellas Original Early Access Song Fix", state: "Released", link: "" },
+    { game: "starsand", name: "Any Clothes As Pajamas Or Swimsuit", state: "Released", link: "" },
+    { game: "starsand", name: "More Saves 12-50", state: "Released", link: "" },
+    { game: "starsand", name: "Stellas Beach Performance - Song Choice Selection", state: "Released", link: "" },
+    { game: "starsand", name: "Stellas Original Early Access Song Fix", state: "Released", link: "" },
 
-    { game: "teredea", access: "free", name: "Storage Plus", state: "Released", picture: "images/mods/teredea-storage-plus.jpg", link: "" },
-    { game: "teredea", access: "free", name: "Fridge Plus", state: "Released", picture: "images/mods/teredea-fridge-plus.jpg", link: "" },
-    { game: "teredea", access: "free", name: "Hue Color Editor", state: "Released", link: "" },
-    { game: "teredea", access: "free", name: "Fields Max Happy Infinitely", state: "Released", picture: "images/mods/teredea-fields-happy.jpg", link: "" },
-    { game: "teredea", access: "free", name: "Best Quality Items", state: "Released", picture: "images/mods/teredea-best-quality.jpg", link: "" },
-    { game: "teredea", access: "free", name: "Free Crafting", state: "Released", picture: "images/mods/teredea-free-crafting.jpg", link: "" },
-    { game: "teredea", access: "free", name: "Full Bag Upgrades All Unlocked", state: "Released", picture: "images/mods/teredea-bag-upgrades.jpg", link: "" },
-    { game: "teredea", access: "free", name: "Unlock All Recipes", state: "Released", picture: "images/mods/teredea-unlock-recipes.jpg", link: "" },
-    { game: "teredea", access: "free", name: "Unlock All Outfits", state: "Released", picture: "images/mods/teredea-unlock-outfits.jpg", link: "" },
+    { game: "teredea", name: "Storage Plus", state: "Released", picture: "images/mods/teredea-storage-plus.jpg", link: "" },
+    { game: "teredea", name: "Fridge Plus", state: "Released", picture: "images/mods/teredea-fridge-plus.jpg", link: "" },
+    { game: "teredea", name: "Hue Color Editor", state: "Released", link: "" },
+    { game: "teredea", name: "Fields Max Happy Infinitely", state: "Released", picture: "images/mods/teredea-fields-happy.jpg", link: "" },
+    { game: "teredea", name: "Best Quality Items", state: "Released", picture: "images/mods/teredea-best-quality.jpg", link: "" },
+    { game: "teredea", name: "Free Crafting", state: "Released", picture: "images/mods/teredea-free-crafting.jpg", link: "" },
+    { game: "teredea", name: "Full Bag Upgrades All Unlocked", state: "Released", picture: "images/mods/teredea-bag-upgrades.jpg", link: "" },
+    { game: "teredea", name: "Unlock All Recipes", state: "Released", picture: "images/mods/teredea-unlock-recipes.jpg", link: "" },
+    { game: "teredea", name: "Unlock All Outfits", state: "Released", picture: "images/mods/teredea-unlock-outfits.jpg", link: "" },
   ],
 
   // ---------- Updates (the site sorts them by date) ----------
@@ -176,6 +179,7 @@ window.SITE = {
     { label: "Discord",    url: "" },
     { label: "Reddit",     url: "" },
     { label: "YouTube",    url: "https://www.youtube.com/@NyxAstraMods" },
+    { label: "Ko-fi",      url: "https://ko-fi.com/nyxastra" },
     { label: "Buy Me a Coffee", url: "https://buymeacoffee.com/nyxastramok" },
   ],
 };

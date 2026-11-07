@@ -113,9 +113,10 @@ section{padding-block:3.2rem 1rem}
 .btn{display:inline-block; font:700 .85rem/1 var(--body); text-decoration:none; color:var(--bg); background:var(--game, var(--sand)); padding:.55rem .9rem; border-radius:999px}
 .btn.off{background:transparent; color:var(--muted); border:1px dashed var(--line); font-weight:400}
 
-.shop-box{display:flex; flex-wrap:wrap; gap:1rem; align-items:center; justify-content:space-between; background:var(--bg2); border:1px solid var(--line); border-radius:var(--r); padding:1.1rem 1.2rem; margin-bottom:1.4rem}
-.shop-box p{margin:0; max-width:65ch}
-.shop-box .btn{font-size:.95rem; padding:.7rem 1.1rem}
+.support-box{display:flex; flex-wrap:wrap; gap:1rem; align-items:center; justify-content:space-between; background:var(--bg2); border:1px solid var(--line); border-radius:var(--r); padding:1.1rem 1.2rem}
+.support-box p{margin:0; max-width:65ch; font-size:1.1rem}
+.support-btns{display:flex; flex-wrap:wrap; gap:.6rem}
+.support-box .btn{font-size:.95rem; padding:.7rem 1.1rem}
 
 .state{display:inline-flex; align-items:center; gap:.35em; font:500 .72rem/1 var(--mono); letter-spacing:.06em; text-transform:uppercase; padding:.3rem .55rem; border-radius:999px; border:1px solid currentColor; white-space:nowrap}
 .s-done{color:var(--st-done)} .s-work{color:var(--st-work)} .s-taken{color:var(--st-taken)} .s-no{color:var(--st-no)} .s-open{color:var(--st-open); border-style:dashed}
@@ -245,7 +246,7 @@ footer .links span{color:var(--muted); border-style:dashed}
       <a href="#now">My projects</a>
       <a href="#why">Why I mod</a>
       <a href="#mods">Free mods</a>
-      <a href="#shop">Early access</a>
+      <a href="#support">Support me</a>
       <a href="#log">Updates</a>
       <a href="#gallery">Gallery</a>
       <a href="#requests">Requests</a>
@@ -276,13 +277,12 @@ footer .links span{color:var(--muted); border-style:dashed}
     <div id="modList"></div>
   </section>
 
-  <section id="shop" class="wrap">
-    <div class="sec-head"><div><span class="eyebrow">Support my work</span><h2>Early access &amp; paid</h2></div></div>
-    <div class="shop-box">
-      <p id="shopInfo"></p>
-      <span id="shopBtn"></span>
+  <section id="support" class="wrap">
+    <div class="sec-head"><div><span class="eyebrow">Support my work</span><h2 id="supportTitle"></h2></div></div>
+    <div class="support-box">
+      <p id="supportInfo"></p>
+      <span class="support-btns" id="supportBtns"></span>
     </div>
-    <div id="shopList"></div>
   </section>
 
 
@@ -390,23 +390,19 @@ footer .links span{color:var(--muted); border-style:dashed}
     }
   }
 
-  // ---------- mods ----------
-  // paid = early access or paid release: no download, only a shop button
-  const isPaid = m => String(m.access || "free").toLowerCase() !== "free";
-  const shopName = S.shopName || "shop";
-  const shopBtn = (url, label) => url
-    ? `<a class="btn" style="--game:var(--sand)" href="${esc(url)}" target="_blank" rel="noopener">${esc(label)}</a>`
-    : `<span class="btn off">Shop link soon</span>`;
-
-  function renderShop(){
-    $("shopInfo").textContent = S.shopInfo || "";
-    $("shopBtn").innerHTML = shopBtn(S.shopLink, "Visit my " + shopName);
-    renderMods("shopList", true);
+  // ---------- support me ----------
+  function renderSupport(){
+    const P = S.support || {};
+    $("supportTitle").textContent = P.title || "Support me";
+    $("supportInfo").textContent = P.info || "";
+    $("supportBtns").innerHTML = (P.links || []).filter(l => l.url).map(l =>
+      `<a class="btn" style="--game:var(--sand)" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join("");
   }
 
-  function renderMods(target = "modList", paid = false){
+  // ---------- mods ----------
+  function renderMods(){
     const out = Object.keys(G).filter(show).map(k => {
-      const list = (S.mods || []).filter(m => m.game === k && isPaid(m) === paid);
+      const list = (S.mods || []).filter(m => m.game === k);
       const cards = list.map(m => `
         <article class="mod g-${k}">
           ${m.picture ? pic(m.picture, m.name) : ""}
@@ -416,18 +412,17 @@ footer .links span{color:var(--muted); border-style:dashed}
             ${m.about ? `<p>${esc(m.about)}</p>` : ""}
             <div class="mod-foot">
               <span class="ver">${m.version ? "v" + esc(m.version) : ""}</span>
-              ${paid ? shopBtn(m.link || S.shopLink, "Get it on " + shopName)
-                : m.link ? `<a class="btn" href="${esc(m.link)}" target="_blank" rel="noopener">Download</a>` : `<span class="btn off">Link soon</span>`}
+              ${m.link ? `<a class="btn" href="${esc(m.link)}" target="_blank" rel="noopener">Download</a>` : `<span class="btn off">Link soon</span>`}
             </div>
           </div>
         </article>`).join("");
       return `<div class="game-block g-${k}">
-        ${paid ? "" : pic(G[k].banner, G[k].name + " banner", "game-banner")}
-        <div class="game-title"><h3>${esc(G[k].name)}</h3>${paid ? "" : `<span class="muted">${esc(G[k].blurb)}</span>`}</div>
-        ${cards ? `<div class="mods">${cards}</div>` : `<p class="empty-note">${paid ? "Nothing here yet." : "No free mods listed yet."}</p>`}
+        ${pic(G[k].banner, G[k].name + " banner", "game-banner")}
+        <div class="game-title"><h3>${esc(G[k].name)}</h3><span class="muted">${esc(G[k].blurb)}</span></div>
+        ${cards ? `<div class="mods">${cards}</div>` : `<p class="empty-note">No free mods listed yet.</p>`}
       </div>`;
     }).join("");
-    $(target).innerHTML = out;
+    $("modList").innerHTML = out;
   }
 
   // ---------- my projects (main focus), then requests in progress (side) ----------
@@ -571,7 +566,7 @@ footer .links span{color:var(--muted); border-style:dashed}
   }
 
   function renderAll(){
-    renderFilter(); renderMods(); renderShop(); renderBoard(); renderPosts(); renderGallery(); renderRequests();
+    renderFilter(); renderMods(); renderSupport();renderBoard(); renderPosts(); renderGallery(); renderRequests();
     wirePics(document);
   }
   renderTop(); renderLinks(); renderWhy(); renderAll(); stars();
