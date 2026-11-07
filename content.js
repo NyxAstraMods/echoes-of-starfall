@@ -133,7 +133,7 @@ window.SITE = {
   // month: "YEAR-MONTH" puts it in that month's slots. Leave it "" if there's no exact month.
   // when:  optional words for the Completed list, like "Oct - Nov 2026".
   // size:  "small", "big" or "" if you don't want to say.
-  // state: "Taken" (picked, not started), "Working", "Done" or "Not possible"
+  // state: "Debating" (thinking about it), "Taken" (picked, not started), "Working", "Done" or "Not possible"
   // Sample:
   // { month: "2026-11", game: "starsand", size: "small", idea: "The idea", note: "", by: "", state: "Taken" },
   requestsOpen: false,   // true = taking requests, false = closed (empty slots say "Closed")
@@ -154,6 +154,10 @@ window.SITE = {
     { month: "2026-11", game: "starsand", size: "big", state: "Working",
       idea: "Competition layout fix",
       note: "Moving and fixing a competition layout blueprint's position. Starsand itself couldn't do it right lol, someone's contest broke!" },
+
+    // Teredea - debating (not taken yet, no month)
+    { month: "", game: "teredea", size: "", state: "Debating", idea: "Max Stamina" },
+    { month: "", game: "teredea", size: "", state: "Debating", idea: "Max Water" },
 
     // Starsand - done
     { month: "", game: "starsand", size: "", state: "Done", idea: "Stellas Beach Performance - Song Choice Selection (Location: Nexus)" },

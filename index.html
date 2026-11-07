@@ -305,6 +305,7 @@ footer .links span{color:var(--muted); border-style:dashed}
       <label for="month">Month <select id="month"></select></label>
     </div>
     <div class="req-games" id="reqGames"></div>
+    <div id="debating"></div>
     <h3 class="sub">Completed requests</h3>
     <div class="tablebox past"><table id="doneTable"></table></div>
   </section>
@@ -354,7 +355,7 @@ footer .links span{color:var(--muted); border-style:dashed}
     s = String(s || "").toLowerCase();
     if (s.startsWith("done") || s.startsWith("released")) return "s-done";
     if (s.startsWith("work") || s.startsWith("wip") || s.startsWith("early")) return "s-work";
-    if (s.startsWith("taken") || s.startsWith("barely")) return "s-taken";
+    if (s.startsWith("taken") || s.startsWith("barely") || s.startsWith("debat")) return "s-taken";
     if (s.startsWith("not")) return "s-no";
     return "s-open";
   };
@@ -528,6 +529,11 @@ footer .links span{color:var(--muted); border-style:dashed}
       return `<div class="req-game g-${k}"><h3>${esc(G[k].name)}</h3>
         <div class="left">${closed ? "Requests closed" : open === 0 ? "All slots filled for " + monthName(m) : open + " of 2 slots open"}</div>${html}</div>`;
     }).join("");
+
+    const debating = reqs.filter(r => show(r.game) && /^debat/i.test(r.state || ""));
+    $("debating").innerHTML = debating.length ? `<h3 class="sub">Requests I'm debating</h3>
+      <p class="muted">Not taken yet. I'm still deciding on these.</p>
+      <div class="side-list">${debating.map(r => task(r.idea, r.state, r.note, r.game)).join("")}</div>` : "";
 
     const done = reqs.filter(r => show(r.game) && /^done/i.test(r.state || ""));
     const when = r => r.when || (r.month ? monthName(r.month) : "");
