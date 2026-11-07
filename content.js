@@ -95,15 +95,15 @@ window.SITE = {
     { game: "starsand", access: "free", name: "Stellas Beach Performance - Song Choice Selection", state: "Released", link: "" },
     { game: "starsand", access: "free", name: "Stellas Original Early Access Song Fix", state: "Released", link: "" },
 
-    { game: "teredea", access: "free", name: "Storage Plus", state: "Released", link: "" },
+    { game: "teredea", access: "free", name: "Storage Plus", state: "Released", picture: "images/mods/teredea-storage-plus.jpg", link: "" },
     { game: "teredea", access: "free", name: "Fridge Plus", state: "Released", link: "" },
     { game: "teredea", access: "free", name: "Hue Color Editor", state: "Released", link: "" },
-    { game: "teredea", access: "free", name: "Fields Max Happy Infinitely", state: "Released", link: "" },
-    { game: "teredea", access: "free", name: "Best Quality Items", state: "Released", link: "" },
-    { game: "teredea", access: "free", name: "Free Crafting", state: "Released", link: "" },
-    { game: "teredea", access: "free", name: "Full Bag Upgrades All Unlocked", state: "Released", link: "" },
-    { game: "teredea", access: "free", name: "Unlock All Recipes", state: "Released", link: "" },
-    { game: "teredea", access: "free", name: "Unlock All Outfits", state: "Released", link: "" },
+    { game: "teredea", access: "free", name: "Fields Max Happy Infinitely", state: "Released", picture: "images/mods/teredea-fields-happy.jpg", link: "" },
+    { game: "teredea", access: "free", name: "Best Quality Items", state: "Released", picture: "images/mods/teredea-best-quality.jpg", link: "" },
+    { game: "teredea", access: "free", name: "Free Crafting", state: "Released", picture: "images/mods/teredea-free-crafting.jpg", link: "" },
+    { game: "teredea", access: "free", name: "Full Bag Upgrades All Unlocked", state: "Released", picture: "images/mods/teredea-bag-upgrades.jpg", link: "" },
+    { game: "teredea", access: "free", name: "Unlock All Recipes", state: "Released", picture: "images/mods/teredea-unlock-recipes.jpg", link: "" },
+    { game: "teredea", access: "free", name: "Unlock All Outfits", state: "Released", picture: "images/mods/teredea-unlock-outfits.jpg", link: "" },
   ],
 
   // ---------- Dev log posts (the site sorts them by date) ----------
