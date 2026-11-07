@@ -478,7 +478,7 @@ footer .links span{color:var(--muted); border-style:dashed}
     $("reqGames").innerHTML = keys.map(k => {
       let open = 0;
       const row = (size, label) => {
-        const got = reqs.filter(r => r.month === m && r.game === k && r.size === size).slice(0, 2);
+        const got = reqs.filter(r => r.month === m && r.game === k).slice(0, 2);
         const slots = [0, 1].map(i => {
           const r = got[i];
           if (!r){
@@ -487,13 +487,13 @@ footer .links span{color:var(--muted); border-style:dashed}
               ? `<div class="slot open ${size}"><span class="state s-no">Closed</span><b class="muted">Not taking requests</b><span class="by">Check back soon</span></div>`
               : `<div class="slot open ${size}"><span class="state s-open">Open</span><b class="muted">Free slot</b><span class="by">Send your idea!</span></div>`;
           }
-          return `<div class="slot ${size}">${chip(r.state || "Taken")}<b>${esc(r.idea)}</b>${r.note ? `<span class="note">${esc(r.note)}</span>` : ""}${r.by ? `<span class="by">Asked by ${esc(r.by)}</span>` : ""}</div>`;
+          return `<div class="slot ${size}">${chip(r.state || "Taken")}<b>${esc(r.idea)}</b>${r.size ? `<span class="by">${r.size === "big" ? "Big" : "Small"} request</span>` : ""}${r.note ? `<span class="note">${esc(r.note)}</span>` : ""}${r.by ? `<span class="by">Asked by ${esc(r.by)}</span>` : ""}</div>`;
         }).join("");
         return `<div class="size-row"><span class="eyebrow">${label}</span><div class="slots">${slots}</div></div>`;
       };
-      const html = row("small", "Small requests") + row("big", "Big requests");
+      const html = row("", "Up to 2 a month");
       return `<div class="req-game g-${k}"><h3>${esc(G[k].name)}</h3>
-        <div class="left">${closed ? "Requests closed" : open === 0 ? "All slots filled for " + monthName(m) : open + " of 4 slots open"}</div>${html}</div>`;
+        <div class="left">${closed ? "Requests closed" : open === 0 ? "All slots filled for " + monthName(m) : open + " of 2 slots open"}</div>${html}</div>`;
     }).join("");
 
     const done = reqs.filter(r => show(r.game) && /^done/i.test(r.state || ""));

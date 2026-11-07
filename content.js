@@ -110,7 +110,7 @@ window.SITE = {
   ],
 
   // ---------- Requests (a side thing) ----------
-  // Each month, each game gets 2 small and 2 big requests.
+  // Each month, each game gets up to 2 request slots (small or big).
   // month: "YEAR-MONTH" puts it in that month's slots. Leave it "" if there's no exact month.
   // when:  optional words for the Completed list, like "Oct - Nov 2026".
   // size:  "small", "big" or "" if you don't want to say.
@@ -124,7 +124,7 @@ window.SITE = {
     "Not all requests I'm working on are listed here, for both Starsand and Teredea. Some of them I may be debating taking.",
     "I've done 10+ requests in a single month, and November's is taken up already. I'll do up to 2 requests for Teredea and 2 for Starsand a month, depending on how large they are. QOL takes priority over cheats. Be realistic, as I'm just one person and have had no time to work on my own mods.",
   ],
-  requestInfo: "Each month I take 4 requests per game: 2 small and 2 big. Slots open on the 1st. Send yours on Discord or in the mod page comments. First come, first served!",
+  requestInfo: "Each month I take up to 2 requests per game, depending on how large they are. Slots open on the 1st. Send yours on Discord or in the mod page comments. First come, first served!",
   requests: [
     // Starsand - working on now
     { month: "2026-11", game: "starsand", size: "big", state: "Working",
@@ -156,6 +156,7 @@ window.SITE = {
     { label: "Nexus Mods", url: "" },
     { label: "Discord",    url: "" },
     { label: "Reddit",     url: "" },
+    { label: "YouTube",    url: "https://www.youtube.com/@NyxAstraMods" },
     { label: "Buy Me a Coffee", url: "https://buymeacoffee.com/nyxastramok" },
   ],
 };
