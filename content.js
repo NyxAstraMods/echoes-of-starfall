@@ -59,6 +59,21 @@ window.SITE = {
       note: "Hopefully large story and quest changes and rewrites." },
   ],
 
+  // ---------- Why I started modding ----------
+  // Each "..." in paragraphs is its own paragraph.
+  why: {
+    title: "Why I started modding in the first place",
+    paragraphs: [
+      "I love these games a lot, but I wanted a lot more from them, and I see great potential. I love writing, making my own characters, and improving the characters and quests that already exist.",
+      "My priority for mods is making my studio for Starsand (which I'm not doing for Teredea, that is a LOT of work xD) ❤️ I hope other people can use it eventually. Starsand has a hefty character creator, so I think it's worth it. I want to overhaul the story, make more cinematics, dialogue and quests, make custom characters and improve the ones that exist.",
+      "I plan to make Youfang fully romanceable. In Teredea, I'm making my custom NPCs, Keir and Nox. Keir will be a romanceable who is a core part of the story and fills in a LOT of plot holes. I want to have my own heart events for the characters, make real cutscenes for them and special moments.",
+      "I want to make the story more impactful in both games, or write story where some is missing. This alone will likely take a very long time, which is why I had to limit requests: I've had little to no time to actually work on why I'm doing this in the first place. Larger requests I decide to accept might take longer. I may also limit requests, because the stuff I want to work on is my drive and motivation to do this in the first place, and if I haven't worked on it in a while, I lose pace with it.",
+      "I appreciate everyone's warm support ^^ and I appreciate you following what I'm doing. If you'd like to donate to help me make more mods, get fixes and support my progress, I have a Ko-fi link. Any donation, no matter how big or how small, means the world to me. I'm forever grateful for your support! ❤️",
+    ],
+    donateLabel: "Donate on Ko-fi",
+    donateLink: "",   // your Ko-fi link, like "https://ko-fi.com/yourname"
+  },
+
   // ---------- Shop (early access and paid mods) ----------
   shopName: "Buy Me a Coffee",
   shopLink: "https://buymeacoffee.com/nyxastramok",
@@ -149,6 +164,38 @@ window.SITE = {
     { month: "", when: "Oct - Nov 2026", game: "teredea", size: "", state: "Done", idea: "Unlock All Recipes" },
     { month: "", when: "Oct - Nov 2026", game: "teredea", size: "", state: "Done", idea: "Unlock All Outfits" },
   ],
+
+  // ---------- Commissions (paid custom mods) ----------
+  // prices: [lowest, highest] in dollars, one pair per complexity level, in the same order as "levels".
+  commissions: {
+    intro: "Want something made just for you? Use the calculator for a rough price, then message me with your idea.",
+    contact: "Preferred contact: Discord",
+    discord: "PhoenixAstra",
+    payment: "Once we agree on a price, you can pay with PayPal or a Ko-fi tier for that amount.",
+    paypal: "",     // your PayPal.me link, like "https://paypal.me/yourname"
+    kofi: "",       // your Ko-fi link, like "https://ko-fi.com/yourname"
+    levels: [
+      "Straightforward - uses what the game already has",
+      "Standard - some new logic",
+      "Complex - systems working together or extra testing",
+    ],
+    categories: [
+      { name: "Simple cheat",          prices: [[10, 20],   [20, 35],   [35, 60]] },
+      { name: "QoL improvement",       prices: [[20, 45],   [35, 90],   [75, 150]] },
+      { name: "UI / gameplay feature", prices: [[50, 100],  [90, 180],  [150, 300]] },
+      { name: "Advanced system",       prices: [[150, 250], [200, 400], [350, 700]] },
+    ],
+    priorityExtra: 30,   // percent added for priority scheduling
+    note: "Not a guaranteed quote. The final price depends on whether it can be done, testing, compatibility and what we agree on.",
+    rules: [
+      "No modeling, rigging, texture painting, UV editing or custom art. UI programming is fine.",
+      "It has to be possible first. I can turn down anything that needs huge parts of the game rewritten.",
+      "One clearly defined feature per commission. More features need another quote.",
+      "Bug fixes: I fix bugs caused by my mod for 14 days. New game updates, mod conflicts and extra features are quoted separately.",
+      "No set finish date, unless we've agreed on a realistic deadline.",
+      "No DLC unlocking or sharing paid content.",
+    ],
+  },
 
   // ---------- Links at the bottom (Nexus, Discord, Ko-fi, YouTube...) ----------
   // A link with url: "" shows as "link soon".
