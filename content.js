@@ -17,7 +17,7 @@ window.SITE = {
   // ---------- Top of the page ----------
   siteName: "Echoes of Starfall",
   tagline: "Mods for Starsand Island and Echoes of Teredea",
-  intro: "Hey, I'm PhoenixAstra on Discord, GeneralTone4770 on Reddit and NyxAstra on Nexus. Heads up: I'm not taking requests right now. I'm flooded with more requests than I agreed to do this month. When they reopen, I'll let you all know!",
+  intro: "Hey, I'm PhoenixAstra on Discord, GeneralTone4770 on Reddit, NyxAstra on Nexus and NyxAstraMods on YouTube. Heads up: I'm not taking requests right now. I'm flooded with more requests than I agreed to do this month. When they reopen, I'll let you all know!",
   banner: "images/banner-main.jpg",     // big picture at the very top (wide, about 1600 x 500)
 
   // ---------- The two games ----------
