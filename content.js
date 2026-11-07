@@ -88,26 +88,27 @@ window.SITE = {
 
   // ---------- Your free mods ----------
   // state: "Released", "Work in progress" or "Planned"
-  // link: the download page (like the Nexus page).
+  // downloads: zip files in the downloads folder. The first one is the main Download button.
+  // link: a download page instead (like the Nexus page), used when there are no downloads.
   // picture and about are optional.
   // Sample:
   // { game: "starsand", name: "Mod name", state: "Released", version: "1.0",
   //   picture: "images/mod-picture.jpg", about: "One line about the mod.", link: "https://..." },
   mods: [
-    { game: "starsand", name: "Any Clothes As Pajamas Or Swimsuit", state: "Released", link: "" },
-    { game: "starsand", name: "More Saves 12-50", state: "Released", link: "" },
+    { game: "starsand", name: "Any Clothes As Pajamas Or Swimsuit", state: "Released", version: "0.1.1", downloads: [ { label: "Download", file: "downloads/Any-Outfit-Swimwear-Pajamas-0.1.1.zip" } ], link: "" },
+    { game: "starsand", name: "More Saves 12-50", state: "Released", version: "1.0.1", downloads: [ { label: "Download", file: "downloads/More-Saves-1.0.1.zip" } ], link: "" },
     { game: "starsand", name: "Stellas Beach Performance - Song Choice Selection", state: "Released", link: "" },
     { game: "starsand", name: "Stellas Original Early Access Song Fix", state: "Released", link: "" },
 
-    { game: "teredea", name: "Storage Plus", state: "Released", picture: "images/mods/teredea-storage-plus.jpg", link: "" },
-    { game: "teredea", name: "Fridge Plus", state: "Released", picture: "images/mods/teredea-fridge-plus.jpg", link: "" },
+    { game: "teredea", name: "Storage Plus", state: "Released", version: "1.0.2", downloads: [ { label: "Download", file: "downloads/Storage-Plus-1.0.2.zip" }, { label: "For Keyboard & Mouse mod", file: "downloads/Storage-Plus-1.0.2-KBM.zip" } ], picture: "images/mods/teredea-storage-plus.jpg", link: "" },
+    { game: "teredea", name: "Fridge Plus", state: "Released", version: "1.0.5", downloads: [ { label: "Download", file: "downloads/Fridge-Plus-1.0.5.zip" }, { label: "For Keyboard & Mouse mod", file: "downloads/Fridge-Plus-1.0.5-KBM.zip" } ], picture: "images/mods/teredea-fridge-plus.jpg", link: "" },
     { game: "teredea", name: "Hue Color Editor", state: "Released", link: "" },
-    { game: "teredea", name: "Fields Max Happy Infinitely", state: "Released", picture: "images/mods/teredea-fields-happy.jpg", link: "" },
-    { game: "teredea", name: "Best Quality Items", state: "Released", picture: "images/mods/teredea-best-quality.jpg", link: "" },
-    { game: "teredea", name: "Free Crafting", state: "Released", picture: "images/mods/teredea-free-crafting.jpg", link: "" },
-    { game: "teredea", name: "Full Bag Upgrades All Unlocked", state: "Released", picture: "images/mods/teredea-bag-upgrades.jpg", link: "" },
-    { game: "teredea", name: "Unlock All Recipes", state: "Released", picture: "images/mods/teredea-unlock-recipes.jpg", link: "" },
-    { game: "teredea", name: "Unlock All Outfits", state: "Released", picture: "images/mods/teredea-unlock-outfits.jpg", link: "" },
+    { game: "teredea", name: "Fields Max Happy Infinitely", state: "Released", version: "1.0.0", downloads: [ { label: "Download", file: "downloads/Happy-Fields-1.0.0.zip" }, { label: "For Keyboard & Mouse mod", file: "downloads/Happy-Fields-1.0.0-KBM.zip" } ], picture: "images/mods/teredea-fields-happy.jpg", link: "" },
+    { game: "teredea", name: "Best Quality Items", state: "Released", version: "1.0.5", downloads: [ { label: "Download", file: "downloads/Max-Quality-1.0.5.zip" }, { label: "For Keyboard & Mouse mod", file: "downloads/Max-Quality-1.0.5-KBM.zip" } ], picture: "images/mods/teredea-best-quality.jpg", link: "" },
+    { game: "teredea", name: "Free Crafting", state: "Released", version: "1.0.4", downloads: [ { label: "Download", file: "downloads/Free-Crafting-1.0.4.zip" }, { label: "For Keyboard & Mouse mod", file: "downloads/Free-Crafting-1.0.4-KBM.zip" } ], picture: "images/mods/teredea-free-crafting.jpg", link: "" },
+    { game: "teredea", name: "Full Bag Upgrades All Unlocked", state: "Released", version: "1.2.1", downloads: [ { label: "Download", file: "downloads/Unlock-Bag-Slots-1.2.1.zip" }, { label: "For Keyboard & Mouse mod", file: "downloads/Unlock-Bag-Slots-1.2.1-KBM.zip" } ], picture: "images/mods/teredea-bag-upgrades.jpg", link: "" },
+    { game: "teredea", name: "Unlock All Recipes", state: "Released", version: "1.0.1", downloads: [ { label: "Download", file: "downloads/Unlock-Recipes-1.0.1.zip" }, { label: "For Keyboard & Mouse mod", file: "downloads/Unlock-Recipes-1.0.1-KBM.zip" } ], picture: "images/mods/teredea-unlock-recipes.jpg", link: "" },
+    { game: "teredea", name: "Unlock All Outfits", state: "Released", version: "1.0.2", downloads: [ { label: "Download", file: "downloads/Unlock-Outfits-1.0.2.zip" }, { label: "For Keyboard & Mouse mod", file: "downloads/Unlock-Outfits-1.0.2-KBM.zip" } ], picture: "images/mods/teredea-unlock-outfits.jpg", link: "" },
   ],
 
   // ---------- Updates (the site sorts them by date) ----------

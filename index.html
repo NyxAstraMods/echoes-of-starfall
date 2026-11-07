@@ -110,6 +110,8 @@ section{padding-block:3.2rem 1rem}
 .mod p{margin:0; color:var(--muted); font-size:.95rem}
 .mod-foot{margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:.5rem; padding-top:.4rem}
 .ver{font:.78rem var(--mono); color:var(--muted)}
+.dl{display:flex; flex-wrap:wrap; gap:.4rem; justify-content:flex-end}
+.dl .btn + .btn{background:transparent; color:var(--fg); border:1px solid var(--game, var(--sand))} /* 2nd download = outline */
 .btn{display:inline-block; font:700 .85rem/1 var(--body); text-decoration:none; color:var(--bg); background:var(--game, var(--sand)); padding:.55rem .9rem; border-radius:999px}
 .btn.off{background:transparent; color:var(--muted); border:1px dashed var(--line); font-weight:400}
 
@@ -412,7 +414,9 @@ footer .links span{color:var(--muted); border-style:dashed}
             ${m.about ? `<p>${esc(m.about)}</p>` : ""}
             <div class="mod-foot">
               <span class="ver">${m.version ? "v" + esc(m.version) : ""}</span>
-              ${m.link ? `<a class="btn" href="${esc(m.link)}" target="_blank" rel="noopener">Download</a>` : `<span class="btn off">Link soon</span>`}
+              <span class="dl">${(m.downloads || []).length
+                ? m.downloads.map(d => `<a class="btn" href="${esc(d.file)}" download>${esc(d.label || "Download")}</a>`).join("")
+                : m.link ? `<a class="btn" href="${esc(m.link)}" target="_blank" rel="noopener">Download</a>` : `<span class="btn off">Link soon</span>`}</span>
             </div>
           </div>
         </article>`).join("");
@@ -566,7 +570,7 @@ footer .links span{color:var(--muted); border-style:dashed}
   }
 
   function renderAll(){
-    renderFilter(); renderMods(); renderSupport();renderBoard(); renderPosts(); renderGallery(); renderRequests();
+    renderFilter(); renderMods(); renderSupport(); renderBoard(); renderPosts(); renderGallery(); renderRequests();
     wirePics(document);
   }
   renderTop(); renderLinks(); renderWhy(); renderAll(); stars();
