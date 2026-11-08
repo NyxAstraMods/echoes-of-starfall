@@ -95,6 +95,8 @@ window.SITE = {
   // { game: "starsand", name: "Mod name", state: "Released", version: "1.0",
   //   picture: "images/mod-picture.jpg", about: "One line about the mod.", link: "https://..." },
   mods: [
+    { game: "starsand", name: "Farming At Windflute", state: "Released", version: "1.0.0", downloads: [ { label: "Download", file: "downloads/Farming-At-Windflute-1.0.0.zip" } ], picture: "images/mods/starsand-farming-at-windflute.jpg", link: "" },
+    { game: "starsand", name: "Save Revamped", state: "Released", version: "1.0.0", downloads: [ { label: "Download", file: "downloads/Save-Revamped-1.0.0.zip" } ], picture: "images/mods/starsand-save-revamped.jpg", link: "" },
     { game: "starsand", name: "Any Clothes As Pajamas Or Swimsuit", state: "Released", version: "0.1.1", downloads: [ { label: "Download", file: "downloads/Any-Outfit-Swimwear-Pajamas-0.1.1.zip" } ], link: "" },
     { game: "starsand", name: "More Saves 12-50", state: "Released", version: "1.0.1", downloads: [ { label: "Download", file: "downloads/More-Saves-1.0.1.zip" } ], link: "" },
 
@@ -148,7 +150,7 @@ window.SITE = {
   requestInfo: "Each month I take up to 2 requests per game, depending on how large they are. Slots open on the 1st. Send yours on Discord or in the mod page comments. First come, first served!",
   requests: [
     // Starsand - working on now
-    { month: "2026-11", game: "starsand", size: "big", state: "Working",
+    { month: "2026-11", game: "starsand", size: "big", state: "Done",
       idea: "Windflute planting & field tools",
       note: "Planting on Windflute, plus selecting, moving and removing fields (because of terraforming clipping)." },
     { month: "2026-11", game: "starsand", size: "big", state: "Working",
