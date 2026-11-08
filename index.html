@@ -247,7 +247,7 @@ footer .links span{color:var(--muted); border-style:dashed}
     <div class="navlinks">
       <a href="#now">My projects</a>
       <a href="#why">Why I mod</a>
-      <a href="#mods">Free mods</a>
+      <a href="#mods">Mods</a>
       <a href="#support">Support me</a>
       <a href="#log">Updates</a>
       <a href="#gallery">Gallery</a>
@@ -275,7 +275,7 @@ footer .links span{color:var(--muted); border-style:dashed}
   </section>
 
   <section id="mods" class="wrap">
-    <div class="sec-head"><div><span class="eyebrow">Free downloads</span><h2>Free mods</h2></div></div>
+    <div class="sec-head"><div><span class="eyebrow">Downloads</span><h2>Mods</h2></div></div>
     <div id="modList"></div>
   </section>
 
@@ -424,7 +424,7 @@ footer .links span{color:var(--muted); border-style:dashed}
       return `<div class="game-block g-${k}">
         ${pic(G[k].banner, G[k].name + " banner", "game-banner")}
         <div class="game-title"><h3>${esc(G[k].name)}</h3><span class="muted">${esc(G[k].blurb)}</span></div>
-        ${cards ? `<div class="mods">${cards}</div>` : `<p class="empty-note">No free mods listed yet.</p>`}
+        ${cards ? `<div class="mods">${cards}</div>` : `<p class="empty-note">No mods listed yet.</p>`}
       </div>`;
     }).join("");
     $("modList").innerHTML = out;
